@@ -1,7 +1,32 @@
 #include <stdio.h>
-#include <GL/freeglut.h>
-#include <GLFW/glfw3.h>
+#include "GL/freeglut.h"
+#include "GLFW/glfw3.h"
 #include <stdlib.h>
+
+typedef unsigned char GGD_Pixel;
+
+typedef struct {
+ GGD_Pixel r;
+ GGD_Pixel g;
+ GGD_Pixel b;
+} pixelData;
+
+typedef struct {
+ int pointSize;
+ int width;
+ int height;
+ int posX;
+ int posY;
+ pixelData *matrix; // The matrix where shit is drawn
+} matrix;
+matrix specs;
+
+typedef struct {
+ int width;
+ int height;
+ char* name;
+ GLFWwindow* window;
+} screen;
 
 GLuint createTexture(matrix* w) {
  GLuint tex;
