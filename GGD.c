@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include "GL/freeglut.h"
-#include "GLFW/glfw3.h"
-#include <stdlib.h>
+#include "GGD.h"
 
 typedef unsigned char GGD_Pixel;
 
