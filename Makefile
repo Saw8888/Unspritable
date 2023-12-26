@@ -1,8 +1,8 @@
 # Specify the paths to your include directories
-INCLUDE_PATH = -Isrc/GL -Isrc/GLFW
+INCLUDE_PATH = -Iinclude/GL -Iinclude/GLFW
 
 # Specify the paths to your library directories
-LIBRARY_PATH = -Lsrc/lib
+LIBRARY_PATH = -Linclude/lib
 
 # Compiler flags
 CFLAGS = $(INCLUDE_PATH) -std=c99
@@ -26,8 +26,8 @@ $(TARGET): $(OBJECTS)
 build/main.o: main.c
 	gcc -c main.c $(CFLAGS) -o build/main.o
 
-build/GGD.o: GGD.c GGD.h
-	gcc -c GGD.c $(CFLAGS) -o build/GGD.o
+build/GGD.o: src/GGD.c src/GGD.h
+	gcc -c src/GGD.c $(CFLAGS) -o build/GGD.o
 
 # Add a clean target for convenience
 clean:

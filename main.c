@@ -1,4 +1,4 @@
-#include "GGD.h"
+#include "src/GGD.h"
 
 #define pixelScale 4
 #define GLW 1000
