@@ -6,9 +6,9 @@
 typedef unsigned char GGD_Pixel;
 
 typedef struct {
- GGD_Pixel r;
- GGD_Pixel g;
- GGD_Pixel b;
+ unsigned char r;
+ unsigned char g;
+ unsigned char b;
 } pixelData;
 
 typedef struct {
