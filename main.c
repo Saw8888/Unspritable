@@ -1,4 +1,4 @@
-#include "src/Unspritable.h"
+#include "unspritable.h"
 #include <math.h>
 #include <time.h>
 #include <windows.h> // for Sleep function on Windows
@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
   frameCount++;
   time_t currentTime = time(NULL);
   if (currentTime - startTime >= 1) {
-   drawFPS(0,10,frameCount);
+   //drawFPS(0,10,frameCount);
    frameCount = 0;
    startTime = currentTime;
   }
