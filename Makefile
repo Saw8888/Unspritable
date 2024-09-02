@@ -14,7 +14,7 @@ LDFLAGS = $(LIBRARY_PATH) -lopengl32 -lfreeglut -lglfw3
 TARGET = build/main
 
 # Specify the object files
-OBJECTS = build/main.o build/Unspritable.o
+OBJECTS = build/main.o build/unspritable.o
 
 # Default target
 all: $(TARGET)
@@ -26,11 +26,12 @@ $(TARGET): $(OBJECTS)
 build/main.o: main.c
 	gcc -c main.c $(CFLAGS) -o build/main.o
 
-build/GGD.o: src/Unspritable.c src/Unspritable.h
-	gcc -c src/GGD.c $(CFLAGS) -o build/GGD.o
+build/unspritable.o: unspritable.c unspritable.h
+	gcc -c unspritable.c $(CFLAGS) -o build/unspritable.o
 
 # Add a clean target for convenience
 clean:
 	rm -f build/*.o $(TARGET)
 
 .PHONY: all clean
+
